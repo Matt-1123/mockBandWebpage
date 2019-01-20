@@ -1,0 +1,273 @@
+@charset "UTF-8";
+
+/* color palette:
+463f3a taupe
+fa8334 mango tango
+f3c969 orange yellow
+edff86 mindaro
+fdfff7 baby powder */
+
+* {box-sizing: border-box;}
+div, section, header, footer, nav {
+  float: left;
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  background: #D9C36C;
+  padding: 0;
+}
+
+/* -------------HEADER---------- */
+header {
+  padding: 10px;
+  background-color: #fa8334;
+}
+
+#logo {
+  width: 25%;  
+}
+
+#logo img {
+  height: 55px;
+  float: left;
+  margin: 2px 15px 0 0;
+  border-radius: 3px;
+}
+
+#logo p {
+  font-size: 28px;
+  font-family: 'Cuprum', sans-serif;
+  font-weight: bold;
+  width: auto;
+}
+
+nav {
+  float: right;
+  width: 50%;
+  margin: 14px 0 0 0;
+}
+
+nav ul {
+  /* getting the ul to behave like a div */
+  list-style: none;
+  float: right;
+  display: block;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  float: left;
+  font-size: 18px;
+  padding: 8px 15px;
+  font-family: Arial;
+}
+
+/* ------------ PROMO ------------- */
+#promo {
+
+  height: 400px;
+  background-image: url('../img/sunset-window.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  opacity: 0.9;
+  position: relative;
+}
+
+h1 {
+  margin: 0;
+  font-size: 70px;
+  color: #fa8334;
+  font-family: 'Cuprum', sans-serif;
+  position: absolute;
+  bottom: 50px;
+  left: 50px;
+}
+
+#tour {
+  background: #f3c969;
+  padding: 10px 10% 50px 10%;
+  position: relative;
+}
+
+#tour::after{
+  border-top: 40px solid #f3c969;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  top: 100%;
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translate(-30%, 0);
+  margin-left: -21px;
+  width: 0;
+  height: 0;
+}
+
+#tour h2 {
+  color: #463f3a;
+  font-family: 'Julius Sans One', sans-serif;
+  text-align: center;
+  font-size: 34px;
+}
+
+#tour ul {
+  width: 100%;
+  list-style: none;
+  display: block;
+  float: left;
+  margin: 0;
+  padding: 0;
+}
+
+.tourdate {
+  display: block;
+  float: left;
+  width: 100%;
+  color: #463f3a;
+  padding: 20px 0;
+  border-bottom: dotted 1px #777;
+}
+
+.tourdate:last-child{
+  border: none;
+}
+
+.tourdate:hover {
+  opacity: 0.9;
+}
+
+#tour .date {
+  width: auto; /* as wide as the content */
+  min-width: 50px;
+  height: 46px;
+  line-height: 46px;
+  margin: 0 20px 0 0;
+  text-align: right;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: Arial;
+}
+
+#tour .venue {
+  width: auto;
+  height: 46px;
+  line-height: 46px;
+  font-family: Arial;
+  font-size: 16px;
+  color: #463f3a;
+  font-weight: bold;
+
+}
+
+#tour .location {
+  float: right;
+  width: 200px;
+  height: 46px;
+  line-height: 46px;
+  text-align: right;
+  margin: 0 30px;
+  font-family: Arial;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#tour .ticketlink {
+  float: right;
+  display: block;
+  width: 150px;
+  height: 46px;
+  line-height: 46px;
+  background-color: #463f3a;
+  text-align: center;
+  text-decoration: none;
+  color: #eee;
+  font-family: Arial;
+  text-transform: uppercase;
+}
+
+/* ------------ MERCH ------------- */
+#merch{
+  background-color: #edff86;
+  padding: 50px 60px;
+  text-align: center;
+}
+#merch h2{
+  color: #463f3a;
+  font-family: 'Julius Sans One', sans-serif;
+  font-size: 34px;
+}
+#product-container{
+  width: 80%;
+  margin: 0 10%;
+  text-align: center;
+  background-color: #edff86;
+}
+.product {
+  width: 33.33%;
+  height: 300px;
+  padding: 10px;
+  position: relative;
+  overflow: hidden;
+  background: #999;
+  margin: 0 0 10px 0;
+}
+.product .image {
+  max-width: 100%;
+  height: 60%;
+  /* background-color: black; */
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.product:nth-child(1) .image {background-image: url("../img/album.png");}
+.product:nth-child(2) .image {background-image: url("../img/shirt.jpg");}
+.product:nth-child(3) .image {background-image: url("../img/misc.jpg");}
+.product:nth-child(4) .image {background-image: url("../img/shirt.jpg");}
+.product:nth-child(5) .image {background-image: url("../img/album.png");}
+.product:nth-child(6) .image {background-image: url("../img/misc.jpg");}
+
+.product > p {
+  color: #222;
+  font-family: 'Julius Sans One', sans-serif;
+  font-size: 20px;
+}
+
+.product .price p{
+  color: #222;
+  font-family: 'Julius Sans One', sans-serif;
+}
+
+.price {
+  width: 100px;
+  height: 80px;
+  background: yellow;
+  position: absolute;
+  text-align: center;
+  left: 50%;
+  transform: translate(-50%, 0);
+  bottom: -35px;
+  -webkit-transition: all 300ms ease-in;
+  -moz-transition: all 300ms ease-in;
+  -ms-transition: all 300ms ease-in;
+  -o-transition: all 300ms ease-in;
+  transition: all 300ms ease-in;
+}
+.product:hover .price{
+  bottom:0;
+}
+
+footer {
+  background: #463f3a;
+  padding: 20px 30px 50px 30px;
+  text-align: center;
+}
+
+footer p {
+  font-weight: bold;
+}
